@@ -13,6 +13,9 @@
     <!-- Link to Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- animation AOS link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <!-- font awesome cdn -->
     <link
       rel="stylesheet"
@@ -49,14 +52,26 @@
     </style>
   </head>
   <body>
-    <!-- header section starts -->
+    <!---- header section starts ---->
 
-    <!-- header section ends -->
+    <!---- header section ends ---->
 
-    <!-- pricing section starts -->
+    <!---- scroll to top ---->
+    <div
+      class="scroll_top fixed bottom-5 right-5 cursor-pointer bg-white px-4 py-3 z-50 hidden"
+    >
+      <button>
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+    </div>
+
+    <!---- pricing section starts ---->
     <section class="pricing-section-six pt-[100px] pb-[50px]">
       <div
         class="pattern-layer now-in-view"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+        data-aos-easing="linear"
         style="background-image: url(./assets/images/pattern-53.png)"
       ></div>
       <div class="sec-title-four text-center" style="margin-top: 50px">
@@ -64,6 +79,7 @@
       </div>
       <div class="auto-container" style="margin-top: 80px">
         <!-- Sec Title Four -->
+        <!-- Button to toggle visibility -->
         <div class="text-center price-block-six">
           <div class="pricing_btn_wraper">
             <div class="pricing_btn_container">
@@ -76,6 +92,7 @@
             </div>
           </div>
         </div>
+
         <div
           id="pricing1"
           class="pricing1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 pricing__active"
@@ -196,7 +213,7 @@
         </div>
         <div
           id="pricing2"
-          class="pricing2 hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 clearfix pricing__inactive"
+          class="pricing2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 pricing__inactive hidden"
         >
           <!-- Price Block Six -->
           <div class="price-block-six col-lg-4 col-md-6 col-sm-12">
@@ -324,9 +341,9 @@
         </div>
       </div>
     </section>
-    <!-- pricing section ends -->
+    <!---- pricing section ends ---->
 
-    <!-- services-section-three starts -->
+    <!---- services-section-three starts ---->
     <section class="services-section-three pt-[100px] pb-[70px]">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <!-- Facility Block -->
@@ -398,7 +415,7 @@
         </div>
       </div>
     </section>
-    <!-- services-section-three ends -->
+    <!---- services-section-three ends ---->
 
     <!---- TV section starts ---->
     <section class="tv-section pt-[30px] pb-[60px]">
@@ -540,7 +557,6 @@
         </div>
       </div>
     </section>
-
     <!---- TV section starts ---->
 
     <!---- faq section starts ---->
@@ -648,7 +664,12 @@
 
           <!-- image colum -->
           <div class="image-column lg:w-7/12">
-            <div class="inner-column">
+            <div
+              class="inner-column"
+              data-aos="fade-left"
+              data-aos-easing="linear"
+              data-aos-duration="800"
+            >
               <div
                 class="pattern-layer"
                 style="background-image: url(./assets/images/faq-pattern.png)"
@@ -676,7 +697,12 @@
           class="lg:flex clearfix items-center justify-between lg:mb-0 mb-[40px]"
         >
           <!-- Content Column -->
-          <div class="content-column lg:w-7/12 mx-auto lg:mb-0 mb-[40px]">
+          <div
+            data-aos="fade-right"
+            data-aos-duration="800"
+            data-aos-easing="linear"
+            class="content-column lg:w-7/12 mx-auto lg:mb-0 mb-[40px]"
+          >
             <div class="inner-column">
               <div class="content">
                 <span class="icon"
@@ -702,7 +728,12 @@
           </div>
 
           <!-- Content Column -->
-          <div class="content-column lg:w-5/12 mx-auto">
+          <div
+            data-aos="fade-left"
+            data-aos-easing="linear"
+            data-aos-duration="800"
+            class="content-column lg:w-5/12 mx-auto"
+          >
             <div
               class="inner-column wow fadeInRight animated"
               data-wow-delay="0ms"
@@ -747,6 +778,9 @@
       class="pricing-section-six relative mb-[20rem] overflow-hidden pt-[100px] px-[0] pb-[50px]"
     >
       <div
+        data-aos="fade-right"
+        data-aos-duration="800"
+        data-aos-easing="linear"
         class="pattern-layer now-in-view"
         style="background-image: url(./assets/images/pattern-53.png)"
       ></div>
@@ -1033,5 +1067,11 @@
 
     <!-- link with js -->
     <script src="./assets/JS/index.js"></script>
+
+    <!-- animation AOS link -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

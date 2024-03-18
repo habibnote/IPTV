@@ -1,9 +1,6 @@
 :root {
   --main-color: rgb(223, 3, 3);
   --main-color-two: rgb(1, 12, 58);
-  --main-color-three: rgb(0, 45, 91);
-  --main-color-four: rgb(255, 98, 6);
-  --main-color-five: rgb(242, 142, 39);
   --main-color-six: rgb(23, 63, 207);
   --main-color-seven: rgb(229, 3, 238);
   --main-color-eight: rgb(255, 241, 255);
@@ -15,7 +12,6 @@
   --main-color-fourteen: rgb(51, 51, 51);
   --main-color-fifteen: rgb(230, 42, 91);
   --main-color-sixteen: rgb(187, 11, 11);
-  --main-color-seventeen: rgb(67, 37, 104);
   --main-color-eighteen: rgb(229, 42, 91);
   --main-color-nineteen: rgb(233, 42, 91);
   --main-color-twenty: rgb(68, 68, 69);
@@ -50,6 +46,7 @@
   padding: 0px;
   border: none;
   outline: none;
+  transition: all 300ms ease;
 }
 
 html {
@@ -72,6 +69,20 @@ img {
   max-width: 1200px;
   padding: 0px 15px;
   margin: 0 auto;
+}
+
+.scroll_top {
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+}
+.scroll_top:hover {
+  background-color: var(--main-color);
+}
+.scroll_top:hover i {
+  color: var(--white-color);
+}
+.scroll_top i {
+  color: var(--main-color);
+  font-size: 20px;
 }
 
 /* ------------   pricing section starts ---------- */
@@ -259,12 +270,6 @@ img {
   position: absolute;
   left: 0px;
   top: 0px;
-  /* line-height: 1em; */
-  /* display: inline-block; */
-  /* -webkit-transition: all 500ms ease; */
-  /* -moz-transition: all 500ms ease; */
-  /* -ms-transition: all 500ms ease; */
-  /* -o-transition: all 500ms ease; */
   transition: all 500ms ease;
 }
 .tv-section .title {
