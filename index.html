@@ -13,12 +13,6 @@
     <!-- Link to Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Link to DaisyUI -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@1.0.0/dist/full.css"
-      rel="stylesheet"
-    />
-
     <!-- font awesome cdn -->
     <link
       rel="stylesheet"
@@ -27,11 +21,159 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <style>
+      .accordion-box .block .acc-btn.active .icon-minus {
+        color: rgb(223, 3, 3);
+      }
+      .accordion-box .block .acc-btn .icon-plus {
+        display: inline-block;
+      }
+      .accordion-box .block .acc-btn .icon-minus {
+        display: none;
+      }
+      .accordion-box .block .acc-content {
+        display: none;
+      }
+      .accordion-box .block .acc-content.active {
+        display: block;
+      }
+      .accordion-box .block .acc-content {
+        display: none;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+      .accordion-box .block .acc-content.active {
+        display: block;
+        max-height: 500px;
+      }
+    </style>
   </head>
   <body>
     <!-- header section starts -->
 
     <!-- header section ends -->
+
+    <!-- faq section starts -->
+    <section
+      class="bg-fixed faq-section"
+      style="background-image: url(./assets/images/faq-bg.jpg)"
+    >
+      <div class="auto-container">
+        <div class="lg:flex">
+          <div class="accordion-column relative mb-[25px] lg:w-5/12">
+            <div class="inner-column relative">
+              <div class="sec-title relative mb-[40px]">
+                <div class="separator"></div>
+                <h3 class="text-[36px]">
+                  Frequently Asked <br />
+                  Questions
+                </h3>
+              </div>
+
+              <!-- Accordian Box -->
+
+              <ul class="accordion-box relative">
+                <!-- First Accordion Block -->
+                <li class="accordion block">
+                  <div class="acc-btn flex">
+                    <div class="icon-outer">
+                      <span class="icon icon-plus fa fa-plus"></span>
+                      <span class="icon icon-minus fa fa-minus"></span>
+                    </div>
+                    Can I Use My Subscription On Multiple Devices?
+                  </div>
+                  <div class="acc-content">
+                    <div class="content">
+                      <div class="text">
+                        No contracts, complete freedom to cancel anytime. Once
+                        cancelled, no additional charges apply and service ends
+                        automatically on the next due date.
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- Second Accordion Block -->
+                <li class="accordion block">
+                  <div class="acc-btn">
+                    <div class="icon-outer">
+                      <span class="icon icon-plus fa fa-plus"></span>
+                      <span class="icon icon-minus fa fa-minus"></span>
+                    </div>
+                    How soon can I start using the service?
+                  </div>
+                  <div class="acc-content">
+                    <div class="content">
+                      <div class="text">
+                        We typically activate all new accounts within 30 minutes
+                        to 12 hours after the invoice has been paid.
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- Third Accordion Block -->
+                <li class="accordion block">
+                  <div class="acc-btn">
+                    <div class="icon-outer">
+                      <span class="icon icon-plus fa fa-plus"></span>
+                      <span class="icon icon-minus fa fa-minus"></span>
+                    </div>
+                    What Internet Quality Is Required?
+                  </div>
+                  <div class="acc-content">
+                    <div class="content">
+                      <div class="text">
+                        A minimum of 16 Mbps is required for your internet
+                        connection. A stable and high-quality internet
+                        connection ensures clear image quality and eliminates
+                        buffering during matches, movies, or series playback.
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <!-- fourth Accordion Block -->
+                <li class="accordion block">
+                  <div class="acc-btn">
+                    <div class="icon-outer">
+                      <span class="icon icon-plus fa fa-plus"></span>
+                      <span class="icon icon-minus fa fa-minus"></span>
+                    </div>
+                    Can I Cancel My Subscription?
+                  </div>
+                  <div class="acc-content">
+                    <div class="content">
+                      <div class="text">
+                        No contracts, complete freedom to cancel anytime. Once
+                        cancelled, no additional charges apply and service ends
+                        automatically on next due date.
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="image-column lg:w-7/12">
+            <div class="inner-column">
+              <div
+                class="pattern-layer"
+                style="background-image: url(./assets/images/faq-pattern.png)"
+              ></div>
+              <div class="image">
+                <img
+                  src="./assets/images/faq.png"
+                  alt="4K Live IPTV - USA, UK, CA &amp; Worldwide"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- faq section ends -->
 
     <!-- speedtest-section starts -->
     <section
@@ -407,5 +549,8 @@
       </div>
     </footer>
     <!-- footer section ends -->
+
+    <!-- link with js -->
+    <script src="./assets/JS/index.js"></script>
   </body>
 </html>
