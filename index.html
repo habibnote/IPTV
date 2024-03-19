@@ -25,6 +25,18 @@
       referrerpolicy="no-referrer"
     />
     <style>
+      /* Custom animation for dropdown */
+      @keyframes dropdownAnimation {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
       .accordion-box .block .acc-btn.active .icon-minus {
         color: rgb(223, 3, 3);
       }
@@ -43,16 +55,128 @@
       .accordion-box .block .acc-content {
         display: none;
         overflow: hidden;
-        transition: max-height 0.3s ease;
+        opacity: 0;
+        /* transform: scaleY(0); */
+        /* transform-origin: top; */
+        transition: transform 300ms ease, opacity 300ms ease;
       }
       .accordion-box .block .acc-content.active {
         display: block;
-        max-height: 500px;
+        opacity: 1;
+        /* transform: scaleY(1); */
+        /* visibility: visible; */
       }
     </style>
   </head>
   <body>
     <!---- header section starts ---->
+    <header class="main-header header-style-seven">
+      <nav class="auto-container">
+        <div class="inner-container mx-auto lg:flex justify-between">
+          <!-- Logo -->
+          <div>
+            <a href="#">
+              <img
+                class="py-[10px]"
+                src="./assets/images/logo.png"
+                alt="Logo"
+              />
+            </a>
+          </div>
+          <!-- Links -->
+          <div class="navlinks hidden md:flex items-center">
+            <ul class="navigation h-5 lg:h-full flex items-center">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li>
+                <a href="#">Installation Guide</a>
+              </li>
+              <li><a href="#">Contact Us</a></li>
+              <!-- Account Dropdown -->
+              <li class="dropdown">
+                <a href="#">Account</a>
+                <ul>
+                  <li>
+                    <a
+                      href="https://4kliveiptv.com/clients/index.php?rp=/login"
+                      target="_blank"
+                      >Login</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://4kliveiptv.com/clients/register.php"
+                      target="_blank"
+                      >Register</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://4kliveiptv.com/clients/index.php?rp=/password/reset"
+                      target="_blank"
+                      >Forget</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li><a href="#" class="hover:text-gray-400">Free Trial</a></li>
+            </ul>
+          </div>
+          <div
+            class="md:hidden"
+            id="menu-toggle"
+            style="
+              width: auto;
+              position: absolute;
+              right: 10px;
+              top: 34px;
+
+              font-size: 30px;
+              cursor: pointer;
+            "
+          >
+            <button onclick="toggleMenu()">
+              <i class="fas fa-bars nav-toggle"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!--------- Side Menu Bar ------------>
+    <div class="sidebar lg:hidden" id="sidebar">
+      <div class="flex p-[20px]">
+        <!-- Logo -->
+        <div>
+          <a href="#">
+            <img class="py-[10px]" src="./assets/images/logo.png" alt="Logo" />
+          </a>
+        </div>
+        <div>
+          <button class="close-btn" onclick="toggleMenu()">
+            <i class="fa-solid fa-xmark text-[25px]"></i>
+          </button>
+        </div>
+      </div>
+
+      <ul class="relative block w-full">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Installation Guide</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li>
+          <a href="#"> Account</a>
+          <div class="dropdown-btn">
+            <span class="fa fa-angle-down">fgf</span>
+          </div>
+          <ul class="hidden">
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Register</a></li>
+            <li><a href="#">Forget</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Free Trial</a></li>
+      </ul>
+    </div>
 
     <!---- header section ends ---->
 
@@ -66,7 +190,7 @@
     </div>
 
     <!---- pricing section starts ---->
-    <section class="pricing-section-six pt-[100px] pb-[50px]">
+    <section class="pricing-section-six relative pt-[100px] pb-[50px]">
       <div
         class="pattern-layer now-in-view"
         data-aos="fade-right"
@@ -826,11 +950,7 @@
                     class="theme-btn start-btn"
                     ><span class="txt"
                       >WHATSAPP
-                      <i
-                        aria-hidden="true"
-                        class="fa fa-whatsapp"
-                        style="font-size: 26px"
-                      ></i></span
+                      <i class="fa-brands fa-whatsapp text-[30px]"></i></span
                   ></a>
                 </div>
               </div>
@@ -870,11 +990,7 @@
                     class="theme-btn start-btn"
                     ><span class="txt"
                       >JOIN TELEGRAM
-                      <i
-                        aria-hidden="true"
-                        class="fa fa-paper-plane"
-                        style="font-size: 30px"
-                      ></i></span
+                      <i class="fa-solid fa-paper-plane text-[30px]"></i></span
                   ></a>
                 </div>
               </div>
@@ -924,8 +1040,7 @@
                     ><span class="txt"
                       >Customer Support
                       <i
-                        aria-hidden="true"
-                        class="fas flaticon-email-5 fa-2x"
+                        class="fa-solid fa-envelope-open-text text-[30px]"
                       ></i></span
                   ></a>
                 </div>

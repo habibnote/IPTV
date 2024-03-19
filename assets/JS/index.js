@@ -1,3 +1,8 @@
+function toggleMenu() {
+  var sidebar = document.getElementById("sidebar");
+  sidebar.classList.toggle("show-sidebar");
+}
+
 // ----------- scroll to top -----------
 const scrollButton = document.querySelector(".scroll_top");
 const toggleScrollButton = () =>
