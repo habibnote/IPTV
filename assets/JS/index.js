@@ -1,6 +1,17 @@
+// ----------- sidebar for small screen --------
 function toggleMenu() {
+  var body = document.body;
   var sidebar = document.getElementById("sidebar");
+
+  body.classList.toggle("mobile-menu-visible");
+  sidebar.classList.toggle("mobile-menu-visible");
   sidebar.classList.toggle("show-sidebar");
+}
+
+// dropdown menu
+function toggleDropdown() {
+  var dropdownMenu = document.querySelector(".dropdown-menu");
+  dropdownMenu.classList.toggle("active");
 }
 
 // ----------- scroll to top -----------

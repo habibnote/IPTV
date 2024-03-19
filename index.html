@@ -13,6 +13,12 @@
     <!-- Link to Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- font family -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    />
+
     <!-- animation AOS link -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
@@ -24,6 +30,29 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- owlcaroule link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- animation link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
     <style>
       /* Custom animation for dropdown */
       @keyframes dropdownAnimation {
@@ -56,19 +85,15 @@
         display: none;
         overflow: hidden;
         opacity: 0;
-        /* transform: scaleY(0); */
-        /* transform-origin: top; */
         transition: transform 300ms ease, opacity 300ms ease;
       }
       .accordion-box .block .acc-content.active {
         display: block;
         opacity: 1;
-        /* transform: scaleY(1); */
-        /* visibility: visible; */
       }
     </style>
   </head>
-  <body>
+  <body class="">
     <!---- header section starts ---->
     <header class="main-header header-style-seven">
       <nav class="auto-container">
@@ -142,7 +167,11 @@
         </div>
       </nav>
     </header>
+
+    <!----- hero section ----->
+
     <!--------- Side Menu Bar ------------>
+    <div class="menu-backdrop"></div>
     <div class="sidebar lg:hidden" id="sidebar">
       <div class="flex p-[20px]">
         <!-- Logo -->
@@ -164,11 +193,13 @@
         <li><a href="#">Installation Guide</a></li>
         <li><a href="#">Contact Us</a></li>
         <li>
-          <a href="#"> Account</a>
-          <div class="dropdown-btn">
-            <span class="fa fa-angle-down">fgf</span>
+          <div class="flex justify-between items-center">
+            <a href="#"> Account</a>
+            <div class="dropdown-btn" onclick="toggleDropdown()">
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
           </div>
-          <ul class="hidden">
+          <ul class="dropdown-menu hidden">
             <li><a href="#">Login</a></li>
             <li><a href="#">Register</a></li>
             <li><a href="#">Forget</a></li>
@@ -179,6 +210,124 @@
     </div>
 
     <!---- header section ends ---->
+
+    <!-- Set up your HTML -->
+    <div class="owl-carousel">
+      <div class="slide">
+        <div class="auto-container">
+          <div class="lg:flex clearfix">
+            <!-- Content Boxed -->
+            <div class="content-boxed lg:w-7/12">
+              <div class="inner-box">
+                <div class="title owl-title">The Best International</div>
+                <h1>IPTV</h1>
+                <div class="text">Service Provider</div>
+                <div class="btns-box">
+                  <a
+                    href="https://4kliveiptv.com/clients/index.php?rp=/store/trial"
+                    target="_blank"
+                    class="theme-btn mr-[25px] btn-style-fifteen"
+                    ><span class="txt"
+                      >Free Trial <i class="fa-solid fa-arrow-right"></i></span
+                  ></a>
+                  <a href="pricing.html" class="theme-btn btn-style-sixteen"
+                    ><span class="txt"
+                      >Other Plans <i class="fa-solid fa-arrow-right"></i></span
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- Image Boxed -->
+            <div class="image-column lg:w-5/12">
+              <div class="inner-column">
+                <div class="image">
+                  <img
+                    src="./assets/images/hero-item.png"
+                    alt="4K Live IPTV - USA, UK, CA &amp; Worldwide"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="auto-container">
+          <div class="lg:flex clearfix">
+            <!-- Content Boxed -->
+            <div class="content-boxed lg:w-7/12">
+              <div class="inner-box">
+                <div class="title owl-title">The Best International</div>
+                <h1>IPTV</h1>
+                <div class="text">Service Provider</div>
+                <div class="btns-box">
+                  <a
+                    href="https://4kliveiptv.com/clients/index.php?rp=/store/trial"
+                    target="_blank"
+                    class="theme-btn mr-[25px] btn-style-fifteen"
+                    ><span class="txt"
+                      >Free Trial <i class="fa-solid fa-arrow-right"></i></span
+                  ></a>
+                  <a href="pricing.html" class="theme-btn btn-style-sixteen"
+                    ><span class="txt"
+                      >Other Plans <i class="fa-solid fa-arrow-right"></i></span
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- Image Boxed -->
+            <div class="image-column lg:w-5/12">
+              <div class="inner-column">
+                <div class="image">
+                  <img
+                    src="./assets/images/image-11.png"
+                    alt="4K Live IPTV - USA, UK, CA &amp; Worldwide"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="auto-container">
+          <div class="lg:flex">
+            <!-- Content Boxed -->
+            <div class="content-boxed lg:w-7/12">
+              <div class="inner-box relative">
+                <div class="title owl-title">The Best International</div>
+                <h1>IPTV</h1>
+                <div class="text">Service Provider</div>
+                <div class="btns-box">
+                  <a
+                    href="https://4kliveiptv.com/clients/index.php?rp=/store/trial"
+                    target="_blank"
+                    class="theme-btn mr-[25px] btn-style-fifteen"
+                    ><span class="txt"
+                      >Free Trial <i class="fa-solid fa-arrow-right"></i></span
+                  ></a>
+                  <a href="pricing.html" class="theme-btn btn-style-sixteen"
+                    ><span class="txt"
+                      >Other Plans <i class="fa-solid fa-arrow-right"></i></span
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- Image Boxed -->
+            <div class="image-column lg:w-5/12">
+              <div class="inner-column">
+                <div class="image">
+                  <img
+                    src="./assets/images/image-13.png"
+                    alt="4K Live IPTV - USA, UK, CA &amp; Worldwide"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!---- scroll to top ---->
     <div
@@ -813,7 +962,7 @@
 
     <!---- speedtest-section starts ---->
     <section
-      class="speedtest-section hide-bg-image"
+      class="speedtest-section hide-bg-image overflow-hidden"
       style="background-image: url(./assets/images/pattern-55.png)"
     >
       <div class="auto-container">
@@ -1183,8 +1332,34 @@
     <!-- link with js -->
     <script src="./assets/JS/index.js"></script>
 
+    <!-- owlcaroule link -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
     <!-- animation AOS link -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        nav: false,
+        items: 1,
+        autoplay: true,
+        // autoplayHoverPause:true,
+        // autoplayTimeout:5000,
+        // smartSpeed:100,
+        animateOut: "fadeOut",
+      });
+    </script>
     <script>
       AOS.init();
     </script>
