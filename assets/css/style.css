@@ -311,15 +311,9 @@ nav .inner-container .navlinks .navigation .dropdown ul li a::before {
   padding-left: 15px; */
 }
 
-.slide .clearfix {
-  /* flex-wrap: wrap; */
-  /* margin-right: -15px;
-    margin-left: -15px; */
-}
-
 .content-boxed .inner-box {
   position: relative;
-  padding-top: 90px;
+  padding-top: 80px;
 }
 .content-boxed .inner-box .title {
   position: relative;
@@ -329,6 +323,7 @@ nav .inner-container .navlinks .navigation .dropdown ul li a::before {
   color: var(--main-color-two);
   font-family: var(--font-family-poppins);
   /* margin-bottom: 5px; */
+  height: 30px;
 }
 .content-boxed .inner-box h1 {
   position: relative;
@@ -344,6 +339,7 @@ nav .inner-container .navlinks .navigation .dropdown ul li a::before {
   font-size: 300px;
   line-height: 0.8em;
   letter-spacing: -10px;
+  margin-bottom: 20px;
 }
 .content-boxed .inner-box .text {
   position: relative;
@@ -353,7 +349,7 @@ nav .inner-container .navlinks .navigation .dropdown ul li a::before {
   transform-origin: top;
   text-transform: uppercase;
   /* transition: all 1000ms ease; */
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-family: var(--font-family-poppins);
   text-align: left;
 }
@@ -1165,7 +1161,11 @@ p {
 }
 
 /* ---- skew animation ---- */
-.rotete-icon {
+.tv-section:hover .rotete-icon {
+  animation: rotateYAnimation 2s infinite ease-in-out;
+}
+
+.rotete-icon:hover {
   animation: rotateYAnimation 2s infinite ease-in-out;
 }
 
