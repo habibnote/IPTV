@@ -81,7 +81,7 @@ img {
 
 .main-header {
   /* position: relative; */
-  z-index: 99;
+  z-index: 9;
   width: 100%;
 }
 
@@ -91,7 +91,7 @@ img {
   top: 0;
   width: 0%;
   height: 100%;
-  z-index: 1;
+  z-index: 99;
   background: rgba(0, 0, 0, 0.9);
   transition-delay: 300ms;
   transition: all 0.4s ease-out;
@@ -259,39 +259,39 @@ nav .inner-container .navlinks .navigation .dropdown ul li a::before {
 /* ------------- hero section ----------------- */
 
 .owl-item.active .slide {
-  animation: fadeIn ease 1s;
+  animation: fadeIn ease 0.5s;
 }
 .owl-item.active .content-boxed .inner-box .title {
-  animation: fadeInRight ease 1s;
+  animation: fadeInRight ease 2s;
 }
-.owl-item.owl-animated-out .content-boxed .inner-box .title {
+/* .owl-item.owl-animated-out .content-boxed .inner-box .title {
   animation: fadeOutRight ease 1s;
-}
+} */
 .owl-item.active .content-boxed .inner-box h1 {
-  animation: fadeInRight ease 1s 0.1s;
+  animation: fadeInRight ease 2s 0.1s;
 }
-.owl-item.owl-animated-out .content-boxed .inner-box h1 {
+/* .owl-item.owl-animated-out .content-boxed .inner-box h1 {
   animation: fadeOutRight ease 1s 0.1s;
-}
+} */
 .owl-item.active .content-boxed .inner-box .text {
-  animation: fadeInRight ease 1s 0.2s;
+  animation: fadeInRight ease 2s 0.2s;
 }
 .owl-item.owl-animated-out .content-boxed .inner-box .text {
   animation: fadeOutRight ease 1s 0.2s;
 }
 
 .owl-item.active .content-boxed .inner-box .btns-box {
-  animation: fadeInRight ease 1s 0.3s;
+  animation: fadeInRight ease 2s 0.3s;
 }
-.owl-item.owl-animated-out .content-boxed .inner-box .btns-box {
+/* .owl-item.owl-animated-out .content-boxed .inner-box .btns-box {
   animation: fadeOutRight ease 1s 0.3s;
-}
+} */
 
 .owl-item.active .image-column .inner-column .image {
-  animation: fadeInDown ease 1s;
+  animation: fadeInDown ease 2s;
 }
 .owl-item.owl-animated-out .image-column .inner-column .image {
-  animation: fadeOutUp ease 1s;
+  animation: fadeOutUp ease 2s;
 }
 
 .slide {
@@ -380,10 +380,11 @@ nav .inner-container .navlinks .navigation .dropdown ul li a::before {
   color: var(--white-color) !important;
 }
 
-.main-slider-five .owl-dots,
+/* .main-slider-five .owl-dots,
 .main-slider-five .owl-nav {
   display: none;
-}
+} */
+
 /* --------------- scroll top top --------------- */
 
 .scroll_top {
@@ -582,7 +583,7 @@ nav .inner-container .navlinks .navigation .dropdown ul li a::before {
 
 /* ----------- tb section -------- */
 .tv-section .content-column .icon {
-  position: absolute;
+  /* position: absolute; */
   left: 0px;
   top: 0px;
   transition: all 500ms ease;
@@ -844,6 +845,7 @@ p {
 }
 
 .btn-style-fifteen {
+  border-radius: 0;
   background: linear-gradient(
     to right,
     var(--main-color-twentytwo) 0%,
@@ -990,6 +992,7 @@ p {
     var(--main-color-two) 0%,
     var(--main-color-eighteen) 100%
   );
+  border-radius: 0;
 }
 .price-block-six .button-box .start-btn:before {
   position: absolute;
@@ -1193,31 +1196,52 @@ p {
 }
 
 .animate-updown {
-  animation: updown 5s linear infinite;
+  animation: updown 2s linear infinite;
 }
 
 /* Add a class to the section when it's in smaller screen size */
-@media (max-width: 1200px) {
+@media only screen and (max-width: 1200px) {
+  .content-boxed .inner-box h1 {
+    font-size: 220px;
+    display: inline-block;
+  }
+
   .speedtest-section.hide-bg-image {
     padding: 100px 0px 70px;
     background-image: none !important;
     background-color: var(--main-color-two);
   }
 }
+
+@media only screen and (max-width: 1021px) {
+  .main-header.header-style-seven {
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  .navlinks {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .content-boxed .inner-box {
+    padding-top: 120px;
+  }
+  .content-boxed .inner-box .title {
+    height: 50px;
+  }
+}
+
 /* Responsive navigation */
-@media (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   .navlinks {
     display: none;
   }
   .nav-toggle {
     display: flex;
   }
-}
-
-@media only screen and (max-width: 1200px) {
-  .content-boxed .inner-box h1 {
-    font-size: 220px;
-    display: inline-block;
+  .slide .image-column .image {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
   }
 }
 
@@ -1226,7 +1250,13 @@ p {
   .content-boxed .inner-box .text {
     font-size: 24px;
   }
+  .content-boxed .inner-box {
+    padding-top: 120px;
+  }
   .content-boxed .inner-box h1 {
     font-size: 140px;
+  }
+  .content-boxed .inner-box .title {
+    height: 30px;
   }
 }

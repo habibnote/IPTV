@@ -98,7 +98,7 @@
       }
     </style>
   </head>
-  <body class="">
+  <body>
     <!---- header section starts ---->
     <header class="main-header header-style-seven">
       <nav class="auto-container">
@@ -709,8 +709,8 @@
           <!-- Content Column -->
           <div class="content-column lg:w-2/3 mx-auto">
             <div class="inner-column pt-[40px] pl-[20px]">
-              <div class="content relative pl-[115px]">
-                <span class="icon rotete-icon">
+              <div class="content relative md:pl-[115px]">
+                <span class="icon md:absolute rotete-icon">
                   <img
                     class=""
                     src="./assets/images/package.png"
@@ -795,8 +795,8 @@
           <!-- Content Column -->
           <div class="content-column mb-[30px] lg:w-2/3 mx-auto">
             <div class="inner-column pt-[40px] pl-[20px]">
-              <div class="content relative pl-[115px]">
-                <span class="icon rotete-icon">
+              <div class="content relative md:pl-[115px]">
+                <span class="icon md:absolute rotete-icon">
                   <img
                     class=""
                     src="./assets/images/package.png"
@@ -1020,7 +1020,7 @@
             class="content-column lg:w-5/12 mx-auto"
           >
             <div
-              class="inner-column wow fadeInRight animated"
+              class="inner-column"
               data-wow-delay="0ms"
               data-wow-duration="1500ms"
               style="
@@ -1373,8 +1373,8 @@
         items: 1,
         autoplay: true,
         // autoplayHoverPause:true,
-        // autoplayTimeout:2000,
-        // smartSpeed:100,
+        autoplayTimeout: 8000,
+        smartSpeed: 4000,
         animateOut: "fadeOut",
       });
     </script>
