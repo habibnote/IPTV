@@ -36,20 +36,36 @@ function togglePricing(option) {
 
 // ----------- faq accordian section -------------
 document.addEventListener("DOMContentLoaded", function () {
+  const accItems = document.querySelectorAll(".accordion.block");
   const accBtns = document.querySelectorAll(".acc-btn");
 
-  accBtns.forEach((btn) => {
-    btn.addEventListener("click", function () {
-      this.classList.toggle("active");
-      this.nextElementSibling.classList.toggle("active");
-      const plusIcon = this.querySelector(".icon-plus");
-      const minusIcon = this.querySelector(".icon-minus");
-      if (this.classList.contains("active")) {
-        plusIcon.style.display = "none";
-        minusIcon.style.display = "inline-block";
+  // Initially open the first accordion item
+  accItems[0].classList.add("active");
+  accItems[0].querySelector(".acc-content").classList.add("active");
+  accItems[0].querySelector(".icon-plus").style.display = "none";
+  accItems[0].querySelector(".icon-minus").style.display = "inline-block";
+
+  accItems.forEach((item) => {
+    item.addEventListener("click", function () {
+      if (!this.classList.contains("active")) {
+        // Close all accordion items
+        accItems.forEach((item) => {
+          item.classList.remove("active");
+          item.querySelector(".acc-content").classList.remove("active");
+          item.querySelector(".icon-plus").style.display = "inline-block";
+          item.querySelector(".icon-minus").style.display = "none";
+        });
+        // Open the clicked accordion item
+        this.classList.add("active");
+        this.querySelector(".acc-content").classList.add("active");
+        this.querySelector(".icon-plus").style.display = "none";
+        this.querySelector(".icon-minus").style.display = "inline-block";
       } else {
-        plusIcon.style.display = "inline-block";
-        minusIcon.style.display = "none";
+        // Close the clicked accordion item
+        this.classList.remove("active");
+        this.querySelector(".acc-content").classList.remove("active");
+        this.querySelector(".icon-plus").style.display = "inline-block";
+        this.querySelector(".icon-minus").style.display = "none";
       }
     });
   });

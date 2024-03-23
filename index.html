@@ -59,18 +59,7 @@
     />
 
     <style>
-      /* Custom animation for dropdown */
-      @keyframes dropdownAnimation {
-        from {
-          opacity: 0;
-          transform: translateY(-10px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
+      /* owl carosule animations */
       .accordion-box .block .acc-btn.active .icon-minus {
         color: rgb(223, 3, 3);
       }
@@ -181,8 +170,6 @@
       </nav>
     </header>
 
-    <!----- hero section ----->
-
     <!--------- Side Menu Bar ------------>
     <div class="menu-backdrop"></div>
     <div class="sidebar lg:hidden" id="sidebar">
@@ -258,7 +245,7 @@
 
     <!---- header section ends ---->
 
-    <!-- Set up your HTML -->
+    <!-- hero section starts -->
     <div class="owl-carousel">
       <div class="slide">
         <div class="auto-container">
@@ -1124,9 +1111,9 @@
           <h2>Stay In Touch With 4KLive IPTV</h2>
         </div>
 
-        <div class="flex flex-wrap">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           <!-- Price Block Six -->
-          <div class="price-block-six md:w-1/3">
+          <div class="price-block-six">
             <div class="inner-box">
               <div class="upper-box">
                 <ul>
@@ -1167,7 +1154,7 @@
           </div>
 
           <!-- Price Block Six -->
-          <div class="price-block-six md:w-1/3">
+          <div class="price-block-six">
             <div class="inner-box wow fadeInLeft animated">
               <div class="upper-box">
                 <ul>
@@ -1206,7 +1193,7 @@
             </div>
           </div>
           <!-- Price Block Six -->
-          <div class="price-block-six md:w-1/3">
+          <div class="price-block-six">
             <div
               class="inner-box wow fadeInLeft animated"
               data-wow-delay="0ms"
@@ -1414,7 +1401,6 @@
         nav: false,
         items: 1,
         autoplay: true,
-        // autoplayHoverPause:true,
         autoplayTimeout: 8000,
         smartSpeed: 4000,
         animateOut: "fadeOut",
